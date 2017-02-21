@@ -12,7 +12,12 @@ Public Class PageBase
 
 
     Public Function GetUserID() As String
+	Dim a = 12323
         Return Session("userid")
+    End Function
+
+    Public Function dddd() As String
+        Return "ddd"
     End Function
 
 End Class
