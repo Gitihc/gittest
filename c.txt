@@ -15,4 +15,8 @@ Public Class PageBase
         Return Session("userid")
     End Function
 
+
+    Public Function abc() As String
+        Return "fdafda"
+    End Function
 End Class
