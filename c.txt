@@ -1,0 +1,18 @@
+Public Class PageBase
+    Inherits System.Web.UI.Page
+
+    Protected Overrides Sub OnLoad(ByVal e As System.EventArgs)
+        If Session("userid") = Nothing Then
+            Dim str As String = "<script language=javascript> window.top.location.href = 'Login.aspx';;</script>"
+            Response.Write(str)
+            Response.End()
+        End If
+        MyBase.OnLoad(e)
+    End Sub
+
+
+    Public Function GetUserID() As String
+        Return Session("userid")
+    End Function
+
+End Class
